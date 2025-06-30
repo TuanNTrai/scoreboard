@@ -1,5 +1,4 @@
-FROM node:lts-alpine AS frontend
-
+FROM node:16-alpine AS frontend
 # install simple http server for serving static content
 # RUN npm install -g @vue/cli
 
