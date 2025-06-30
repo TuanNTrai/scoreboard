@@ -50,8 +50,7 @@ COPY . .
 RUN go mod download
 
 # Build the application
-RUN go build -o run cmd/scoreboard/main.go
-
+RUN go build -o run ./cmd/scoreboard
 # Move to /dist directory as the place for resulting binary folder
 WORKDIR /dist
 
