@@ -20,6 +20,8 @@ RUN npm run build
 
 
 FROM golang:alpine AS server
+# Copy built frontend files from frontend stage
+COPY --from=frontend /app/dist ./frontend/dist
 
 # Set necessary environmet variables needed for our image
 ENV GO111MODULE=on \
