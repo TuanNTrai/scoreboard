@@ -8,4 +8,4 @@ All components have been successfully built and deployed:
 - ✅ Backend (Go)
 - ✅ Live Demo Available
 
-🔗 **Access the live demo**: [scoreboard.miikka.xyz](https://scoreboard.miikka.xyz)
+🔗 **Access the live demo**: [scoreboard-2ars.onrender.com](https://scoreboard-2ars.onrender.com)
