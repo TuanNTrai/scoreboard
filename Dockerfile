@@ -23,6 +23,19 @@ FROM golang:alpine AS server
 # Copy built frontend files from frontend stage
 COPY --from=frontend /app/dist ./frontend/dist
 
+# Copy Go source code
+COPY . .
+
+# Build Go application
+RUN go mod download
+RUN go build -o scoreboard ./cmd/scoreboard
+
+# Expose port
+EXPOSE 8080
+
+# Run the application
+CMD ["./scoreboard"]
+
 # Set necessary environmet variables needed for our image
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
