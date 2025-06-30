@@ -12,8 +12,7 @@ COPY /frontend/package*.json ./
 
 # install project dependencies
 RUN npm install
-RUN npm audit fix
-
+# RUN npm audit fix
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY  /frontend .
 
