@@ -30,7 +30,7 @@ jobs:
       - name: Build frontend
         run: |
           cd frontend
-          npm run build
+          NODE_OPTIONS="--legacy-openssl-provider" npm run build
 
       - name: Setup Go
         uses: actions/setup-go@v4
