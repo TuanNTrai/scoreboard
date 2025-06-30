@@ -19,8 +19,7 @@ const (
 )
 
 func main() {
-	static := flag.String("static", "./frontend/public", "Path to static dir")
-	port := flag.String("port", "8080", "Port to listen")
+static := flag.String("static", "./frontend/dist", "Path to static dir")	port := flag.String("port", "8080", "Port to listen")
 	mem := flag.String("mem", "./assets/memory.json", "path to memory.json")
 	designs := flag.String("designs", "./assets/designs.json", "path to designs")
 
